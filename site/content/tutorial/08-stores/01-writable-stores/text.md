@@ -25,3 +25,17 @@ function reset() {
 	count.set(0);
 }
 ```
+Another way to access *stores* is with _$_ prefix as described in https://svelte.dev/docs#4_Prefix_stores_with_$_to_access_their_values so you can rewrite `increment` function in `Incrementer.svelte` tab just this way:
+
+```js
+function increment() {
+	$count++;
+}
+```
+
+For `reset` function in `Resetter.svelte` tab, you should write:
+```js
+function reset() {
+	$count = 0;
+}
+```
